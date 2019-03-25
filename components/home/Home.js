@@ -1,5 +1,6 @@
 import React from 'react';
-import { Menu, Button } from 'antd';
+import { Button } from 'antd';
+import BackgroundImage from '../../images/background_image.jpg';
 
 class Home extends React.Component {
     state = {
@@ -26,10 +27,11 @@ class Home extends React.Component {
             <h1>{this.state.clicked && this.state.selectedAffirmation}</h1>
             <style jsx>{`
               .bg-img {
-                background-image:
-                linear-gradient( rgba(0, 0, 0, 0.336),
-                rgba(0, 0, 0, 0.281)),
-                url(/background_image.jpg);
+                // background-image:
+                // linear-gradient( rgba(0, 0, 0, 0.336),
+                // rgba(0, 0, 0, 0.281)),
+                // url(/background_image.jpg);
+                background: url() no-repeat;
                 width: 100%;
                 height: 100vh;
                 background-size: cover;

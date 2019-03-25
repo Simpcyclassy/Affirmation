@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
-    "babel-plugin-inline-import": "^3.0.0"
+    "babel-plugin-inline-import": "^3.0.0",
+    "next-images": "^1.1.1"
   }
 }
