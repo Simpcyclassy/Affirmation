@@ -1,6 +1,6 @@
 import React from 'react';
 import stylesheet from 'antd/dist/antd.min.css'
-import { Layout, Menu, Breadcrumb, Icon } from 'antd';
+import { Layout } from 'antd';
 
 import DailyAffirmations from '../components/DailyAffirmations';
 
