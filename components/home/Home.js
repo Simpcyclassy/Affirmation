@@ -1,14 +1,29 @@
 import React from 'react';
 import { Menu, Button } from 'antd';
 
-const { Item } = Menu;
-
 class Home extends React.Component {
+    state = {
+        affirmations: [
+            "Today I am growing",
+            "Today, I am loved",
+            "Today, I feel blessed",
+            "Today, I am thankful"
+        ],
+        clicked: false,
+        selectedAffirmation: null
+    };
 
+    handleClick = () => {
+        this.setState({
+            clicked: true,
+            selectedAffirmation: this.state.affirmations[Math.floor(Math.random() * this.state.affirmations.length)]
+        })
+    }
     render() {
         return (
             <div className="bg-img">
-            <Button span={6}>Refocus your day</Button>
+            <Button onClick={this.handleClick}>Refocus your day</Button>
+            <h1>{this.state.clicked && this.state.selectedAffirmation}</h1>
             <style jsx>{`
               .bg-img {
                 background-image:
