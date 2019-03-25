@@ -27,6 +27,7 @@
     "react-dom": "^16.8.5"
   },
   "devDependencies": {
-    "babel-plugin-import": "^1.11.0"
+    "babel-plugin-import": "^1.11.0",
+    "babel-plugin-inline-import": "^3.0.0",
   }
 }
