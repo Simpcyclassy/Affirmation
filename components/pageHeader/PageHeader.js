@@ -1,6 +1,8 @@
 import React from 'react';
 import { Avatar, Menu, Layout } from 'antd';
 
+import Logo from '../../images/Logo.png';
+
 const { Item } = Menu;
 const { Header } = Layout;
 
@@ -12,30 +14,13 @@ class PageHeader extends React.Component {
                   mode="horizontal"
                   theme="dark"
               >
-                  <Avatar src="/Logo.png" size="large" shape="regular"/>
-                  <Item key="sign in"> Sign in </Item>
-                  <Item key="map View"> Map View </Item>
-                  <Item key="home"> Home </Item>
+                    <Item key="logo">
+                        <Avatar src={Logo} size="large" shape="regular"/>
+                    </Item>
+                    <Item key="sign in"> Sign in </Item>
+                    <Item key="map View"> Map View </Item>
+                    <Item key="home"> Home </Item>
               </Menu>
-              <style jsx>{`
-                  Avatar {
-                      float: left;
-                      position: relative;
-                      top: 50%;
-                      transform: translateY(-50%);
-                  }
-                  Header {
-                    position: fixed;
-                    width: 100%;
-                    z-index: 1;
-                  }
-                  Item {
-                    position: relative;
-                    float: right;
-                    top: 50%;
-                    transform: translateY(-50%);
-                  }
-              `}</style>
           </Header>
       );
   }
