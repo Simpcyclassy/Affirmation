@@ -1,11 +1,33 @@
 import React from 'react';
 import { Button } from 'antd';
-import BackgroundImage from '../../images/background_image.jpg';
+import Background from '../../images/background_image.jpg';
+
+let body = {
+    backgroundImage: `url(${Background})`,
+    width: "100%",
+    height: "100vh",
+    backgroundSize: "cover",
+    display: "flex",
+    flexDirection: "column-reverse",
+    justifyContent: "center",
+    alignItems: "center",
+};
+let button = {
+    height: "50px",
+    padding: "2px",
+};
+let texts = {
+    textAlign: "center",
+    fontSize: "20px",
+    color: "#000",
+};
+
+
 
 class Home extends React.Component {
     state = {
         affirmations: [
-            "Today I am growing",
+            "Today, I am growing",
             "Today, I am loved",
             "Today, I feel blessed",
             "Today, I am thankful"
@@ -22,29 +44,10 @@ class Home extends React.Component {
     }
     render() {
         return (
-            <div className="bg-img">
-            <Button onClick={this.handleClick}>Refocus your day</Button>
-            <h1>{this.state.clicked && this.state.selectedAffirmation}</h1>
-            <style jsx>{`
-              .bg-img {
-                // background-image:
-                // linear-gradient( rgba(0, 0, 0, 0.336),
-                // rgba(0, 0, 0, 0.281)),
-                // url(/background_image.jpg);
-                background: url() no-repeat;
-                width: 100%;
-                height: 100vh;
-                background-size: cover;
-                }
-                Button {
-                    height: 50px;
-                    padding: 2px;
-                    align-items: center;
-                    display: flex;
-                    justify-content: center;
-                }
-            `}</style>
-          </div>
+            <div style={body}>
+                <Button onClick={this.handleClick} style={button}>Refocus your day</Button>
+                <span style={texts}>{this.state.clicked && this.state.selectedAffirmation}</span>
+            </div>
         );
     }
 }
